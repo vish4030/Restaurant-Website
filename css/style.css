@@ -1,0 +1,414 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*,
+*::after,
+*::before{
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+ul li {
+    list-style: none;
+}
+
+a {
+    font-size: 1.2rem;
+    padding: 0.5em;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+p,
+li {
+    font-size: 1.4rem;
+    padding: 0.2em 0;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 500;
+}
+
+/* ################## Utility classes ############## */
+
+.container{
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+}
+
+.btn{
+    display: inline-block;
+    padding: 1em 2em;
+    border-radius: 2em;
+    text-transform: uppercase;
+
+}
+
+.btn-primary{
+    color: #fff;
+    background: #16a083;
+    border: none;
+}
+
+/* ############################ for desktop  */
+
+.navbar-container input[type="checkbox"],
+.navbar-container .hamberger-line{
+    display: none;
+}
+
+.navbar{
+    box-shadow: 0 5px 10px 0 #aaa;
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    color: #000;
+    opacity: 0.8;
+    z-index: 999;
+    
+}
+
+.navbar-container{
+    display: flex;
+    justify-content: space-between;
+    height: 64px;
+    align-items: center;
+}
+
+ .menu-items{
+    order: 2;
+    display: flex;
+    
+}
+
+.logo{
+    order: 1;
+    font-size: 3rem;
+}
+
+.navbar a{
+    color: #000;
+    font-weight: 500;
+    transition: color 0.5s ease-in-out;
+}
+
+.navbar a:hover{
+    color: #117964;
+}
+
+/* #################################### showcase area ######################### */
+
+.showcase-area{
+    height: 50vh;
+    background:url("../image/header-image2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+.showcase-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    
+}
+
+.showcase-container .main-title{
+    text-transform: uppercase;
+    font-size: 2.2rem;
+}
+
+/* ############################ About styling ####################### */
+
+#about{
+    padding: 40px 0;
+    background-color: #ddd;
+     
+}
+
+.about-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.about-text{
+    flex: 1 1 350px;
+    padding: 30px;
+    margin: auto;
+    transform: translate(-150%);
+    animation: about-text 1s forwards ease-in;
+}
+
+@keyframes about-text {
+    100%{
+        transform: translate(0%);
+    }
+}
+
+
+.about-img{
+    flex:1 1 350px;
+    padding:  30px;
+    margin: auto;
+    transform: translate(150%);
+    animation: about-img 1s forwards ease-in;
+}
+
+@keyframes about-img {
+   100%{
+        transform: translate(0%);
+    }
+}
+
+.about-img img{
+    display: block;
+    max-width: 100%;
+    height: 350px;
+    object-fit: cover;
+    object-position: right;
+}
+
+/* ######################### food category styling ################## */
+
+#category{
+    padding: 5rem 0 10rem 0;
+}
+
+#category h1{
+    text-align: center;
+    font-size: 3rem;
+    padding: 0.5em;
+    text-transform: uppercase;
+}
+
+
+
+.food-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.food-container img{
+    display: block;
+    width: 100%;
+    margin: auto;
+    max-height: 300px;
+    object-fit: cover;
+    
+}
+
+.img-container{
+    position: relative;
+    text-align: center;
+    margin: 0 1rem;
+
+}
+
+.img-container h2{
+    font-size: 1.6rem;
+    margin-bottom: .5em;
+}
+
+
+.food-info{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+    opacity: 0;
+    z-index: 5;
+    transition:all .5s ease-in-out; 
+    
+    
+}
+
+.img-container:hover .food-info{
+    opacity: 1;
+    top: 50%;
+    
+}
+
+.img-container::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    opacity: 0;
+    z-index: 1;
+    transform: scaleY(0);
+    transform-origin: 100% 100%;
+    transition: all .3s ease-in-out;
+}
+
+.img-container:hover::after{
+    opacity: 1;
+    transform: scaleY(1);
+}
+
+/* ######################## food menu styling ############################# */
+
+
+#food-menu h2{
+    font-size: 3.5rem;
+    padding-bottom: .2em;
+    text-align: center;
+}
+
+.food-menu-container
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.food-menu-item img{
+    display: block;
+    width: 250px;
+    height:  250px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.food-menu-item{
+    display: flex;
+    flex: 1 1 420px;
+    justify-content: space-evenly;
+    margin-bottom: 3rem;
+}
+
+.food-discription{
+    margin: auto 1.6rem;
+}
+
+.food-discription h3{
+    font-size: 2.2rem;
+}
+
+/* ################################# Testimonail styling ################ */
+
+#testimonail h2{
+    font-size: 3.5rem;
+    padding-bottom: .5em;
+    font-weight: 500;
+    text-align: center;
+}
+
+.testimonail-container{
+    display: flex;
+}
+
+
+.testimonail-container img{
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    border-radius: 50%;
+
+}
+
+.testimonail-box{
+    text-align: center;
+    flex: 1 1 500px;
+    justify-content: space-evenly;
+}
+
+.testimonail-box h3{
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    font-weight: 300;
+    padding: .5em;
+}
+
+.testimonail-box p{
+    font-size: 1.4rem;
+    font-weight: 300;
+    padding: .5em;
+}
+
+.star-rating{
+    color: rgb(241, 122, 67);
+}
+
+
+/* ################################# contact Styling ##################### */
+
+#contact{
+    background-color: #ddd;
+    padding: 5rem 0;
+}
+.contact-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contact-img{
+    width: 50%;
+    height: 350px;
+}
+
+.contact-img img{
+   width: 100%;
+   max-height: 350px;
+}
+
+.contact-message{
+    width: 50%;
+    height: 350px;
+    background-color: #fff;
+    padding: .5rem;
+}
+
+.contact-message h2{
+    font-size: 3.5rem;
+    padding: .5em 0;
+}
+
+.contact-message input{
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    padding: .5rem;
+    border: none;
+    border-bottom: 2px solid grey;
+}
+
+.contact-message textarea{
+    width: 100%;
+    height: 125px;
+    font-size: 1.6rem;
+    padding: .5rem;
+    border: none;
+    border-bottom: 2px solid grey;
+}
+
+
+/* ################# footer #######################  */
+
+.footer{
+    background-color: gray;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+}
