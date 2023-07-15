@@ -2,17 +2,17 @@
 
 *,
 *::after,
-*::before{
-   box-sizing: border-box;
-   padding: 0;
-   margin: 0;
+*::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
-html{
+html {
     font-size: 62.5%;
 }
 
-body{
+body {
     font-family: 'Poppins', sans-serif;
 }
 
@@ -41,13 +41,13 @@ h3 {
 
 /* ################## Utility classes ############## */
 
-.container{
+.container {
     max-width: 1200px;
     width: 90%;
     margin: auto;
 }
 
-.btn{
+.btn {
     display: inline-block;
     padding: 1em 2em;
     border-radius: 2em;
@@ -55,7 +55,7 @@ h3 {
 
 }
 
-.btn-primary{
+.btn-primary {
     color: #fff;
     background: #16a083;
     border: none;
@@ -64,11 +64,11 @@ h3 {
 /* ############################ for desktop  */
 
 .navbar-container input[type="checkbox"],
-.navbar-container .hamberger-line{
+.navbar-container .hamberger-line {
     display: none;
 }
 
-.navbar{
+.navbar {
     box-shadow: 0 5px 10px 0 #aaa;
     position: fixed;
     width: 100%;
@@ -76,76 +76,80 @@ h3 {
     color: #000;
     opacity: 0.8;
     z-index: 999;
-    
+
 }
 
-.navbar-container{
+.navbar-container {
     display: flex;
     justify-content: space-between;
     height: 64px;
     align-items: center;
 }
 
- .menu-items{
+.menu-items {
     order: 2;
     display: flex;
-    
+
 }
 
-.logo{
+.logo {
     order: 1;
     font-size: 3rem;
 }
 
-.navbar a{
+.navbar a {
     color: #000;
     font-weight: 500;
     transition: color 0.5s ease-in-out;
 }
 
-.navbar a:hover{
+.navbar a:hover {
     color: #117964;
 }
 
 /* #################################### showcase area ######################### */
 
-.showcase-area{
+.showcase-area {
     height: 50vh;
-    background:url("../image/header-image2.jpg");
+    background: url("../image/header-image2.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    
+
 }
 
-.showcase-container{
+.showcase-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100%;
-    
+
 }
 
-.showcase-container .main-title{
+.showcase-container .main-title {
     text-transform: uppercase;
     font-size: 2.2rem;
 }
 
 /* ############################ About styling ####################### */
 
-#about{
+#about {
     padding: 40px 0;
     background-color: #ddd;
-     
+
 }
 
-.about-container{
+#about h2{
+    font-size: 2.2rem;
+    font-weight: 500;
+}
+.about-container {
     display: flex;
     flex-wrap: wrap;
 }
 
-.about-text{
+.about-text {
     flex: 1 1 350px;
     padding: 30px;
     margin: auto;
@@ -154,29 +158,29 @@ h3 {
 }
 
 @keyframes about-text {
-    100%{
+    100% {
         transform: translate(0%);
     }
 }
 
 
-.about-img{
-    flex:1 1 350px;
-    padding:  30px;
+.about-img {
+    flex: 1 1 350px;
+    padding: 30px;
     margin: auto;
     transform: translate(150%);
     animation: about-img 1s forwards ease-in;
 }
 
 @keyframes about-img {
-   100%{
+    100% {
         transform: translate(0%);
     }
 }
 
-.about-img img{
+.about-img img {
     display: block;
-    max-width: 100%;
+    width: 100%;
     height: 350px;
     object-fit: cover;
     object-position: right;
@@ -184,66 +188,67 @@ h3 {
 
 /* ######################### food category styling ################## */
 
-#category{
+#category {
     padding: 5rem 0 10rem 0;
 }
 
-#category h1{
+#category h1 {
     text-align: center;
     font-size: 3rem;
-    padding: 0.5em;
+    padding: 0 2em;
     text-transform: uppercase;
 }
 
 
 
-.food-container{
+.food-container {
     display: flex;
     justify-content: space-between;
+    padding: 0 3rem;
 }
 
-.food-container img{
+.food-container img {
     display: block;
     width: 100%;
     margin: auto;
-    max-height: 300px;
+    max-height: 350px;
     object-fit: cover;
-    
+
 }
 
-.img-container{
+.img-container {
     position: relative;
     text-align: center;
-    margin: 0 1rem;
+    margin: 1rem;
 
 }
 
-.img-container h2{
+.img-container h2 {
     font-size: 1.6rem;
     margin-bottom: .5em;
 }
 
 
-.food-info{
+.food-info {
     position: absolute;
     top: 70%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     color: #fff;
     opacity: 0;
     z-index: 5;
-    transition:all .5s ease-in-out; 
-    
-    
+    transition: all .5s ease-in-out;
+
+
 }
 
-.img-container:hover .food-info{
+.img-container:hover .food-info {
     opacity: 1;
     top: 50%;
-    
+
 }
 
-.img-container::after{
+.img-container::after {
     content: "";
     display: block;
     position: absolute;
@@ -251,7 +256,7 @@ h3 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.8);
+    background: rgba(0, 0, 0, 0.8);
     opacity: 0;
     z-index: 1;
     transform: scaleY(0);
@@ -259,7 +264,7 @@ h3 {
     transition: all .3s ease-in-out;
 }
 
-.img-container:hover::after{
+.img-container:hover::after {
     opacity: 1;
     transform: scaleY(1);
 }
@@ -267,58 +272,65 @@ h3 {
 /* ######################## food menu styling ############################# */
 
 
-#food-menu h2{
+#food-menu h2 {
     font-size: 3.5rem;
     padding-bottom: .2em;
     text-align: center;
 }
 
-.food-menu-container
-{
+.food-menu-container {
     display: flex;
     flex-wrap: wrap;
 }
 
 
-.food-menu-item img{
+.food-menu-item img {
     display: block;
     width: 250px;
-    height:  250px;
+    height: 250px;
     border-radius: 50%;
     object-fit: cover;
     object-position: center;
 }
 
-.food-menu-item{
+.food-menu-item {
     display: flex;
     flex: 1 1 420px;
     justify-content: space-evenly;
     margin-bottom: 3rem;
 }
 
-.food-discription{
+.food-discription {
     margin: auto 1.6rem;
 }
 
-.food-discription h3{
+.food-discription h3 {
     font-size: 2.2rem;
+    text-transform: capitalize;
 }
+
+.food-discription .price{
+    font-size: 1.6rem;
+    color: #094e3f;
+    font-weight: 700;
+}
+
 
 /* ################################# Testimonail styling ################ */
 
-#testimonail h2{
+#testimonail h2 {
     font-size: 3.5rem;
     padding-bottom: .5em;
     font-weight: 500;
     text-align: center;
 }
 
-.testimonail-container{
+.testimonail-container {
     display: flex;
 }
 
 
-.testimonail-container img{
+.testimonail-container img {
     display: block;
     width: 100px;
     height: 100px;
@@ -327,64 +339,67 @@ h3 {
 
 }
 
-.testimonail-box{
+.testimonail-box {
     text-align: center;
-    flex: 1 1 500px;
+    width: 100%;
     justify-content: space-evenly;
 }
 
-.testimonail-box h3{
+.testimonail-box h3 {
     font-size: 1.6rem;
     text-transform: capitalize;
     font-weight: 300;
     padding: .5em;
 }
 
-.testimonail-box p{
+.testimonail-box p {
     font-size: 1.4rem;
     font-weight: 300;
     padding: .5em;
 }
 
-.star-rating{
+.star-rating {
     color: rgb(241, 122, 67);
 }
 
 
 /* ################################# contact Styling ##################### */
 
-#contact{
+#contact {
     background-color: #ddd;
     padding: 5rem 0;
 }
-.contact-container{
+
+.contact-container {
     display: flex;
     flex-wrap: wrap;
 }
 
-.contact-img{
+.contact-img {
     width: 50%;
     height: 350px;
 }
 
-.contact-img img{
-   width: 100%;
-   max-height: 350px;
+.contact-img img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+
 }
 
-.contact-message{
+.contact-message {
     width: 50%;
     height: 350px;
     background-color: #fff;
     padding: .5rem;
 }
 
-.contact-message h2{
+.contact-message h2 {
     font-size: 3.5rem;
-    padding: .5em 0;
+    padding: .2em 0;
 }
 
-.contact-message input{
+.contact-message input {
     display: block;
     width: 100%;
     margin-bottom: 1rem;
@@ -392,23 +407,181 @@ h3 {
     padding: .5rem;
     border: none;
     border-bottom: 2px solid grey;
+    box-shadow: none;
+    outline: none;
 }
 
-.contact-message textarea{
+.contact-message textarea {
     width: 100%;
-    height: 125px;
+    height: 145px;
     font-size: 1.6rem;
     padding: .5rem;
     border: none;
     border-bottom: 2px solid grey;
+    box-shadow: none;
+    outline: none;
 }
 
 
 /* ################# footer #######################  */
 
-.footer{
+.footer {
     background-color: gray;
     color: #fff;
     text-align: center;
     padding: 2rem 0;
+}
+
+
+
+/* ################################  media Query ###################### */
+
+@media screen and (max-width:768px) {
+    
+
+    .navbar {
+        opacity: 0.9;
+    }
+
+    .navbar-container {
+        display: block;
+        height: 64px;
+        position: relative;
+    }
+
+    .navbar-container input[type="checkbox"],
+    .navbar-container .hamberger-line {
+        display: block;
+    }
+
+    .navbar .menu-items{
+        padding: 100px;
+        background: #f5f5f5;
+        width: 300px;
+        height: 100vh;
+        transform: translateX(-150%);
+        display: flex;
+        flex-direction: column;
+        margin-left:-40px;
+        padding-left: 50px;
+        transition: transform .3s ease-in-out;
+    }
+
+    .navbar .logo{
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 3rem;
+    }
+
+    .navbar-container input{
+        height: 32px;
+        width: 40px;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        opacity: 0;
+        z-index: 5;
+    }
+
+    .navbar-container .hamberger-line{
+        display: block;
+        width: 38px;
+        height: 32px;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        z-index: 2;
+    }
+
+    .hamberger-line .line{
+        width: 100%;
+        height: 4px;
+        background-color: #2e2d2d;
+        border-radius: 10px;
+    }
+
+    .hamberger-line .line1{
+        transform-origin: 0% 0%;
+        transition: transform .3s ease-in-out;
+    }
+    .hamberger-line .line2{
+        transition: transform .3s ease-in-out;
+    }
+    .hamberger-line .line3{
+        transform-origin: 0% 100%;
+        transition: transform .3s ease-in-out;
+    }
+
+    .menu-items a{
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+     
+    .navbar-container input[type="checkbox"]:checked ~ .menu-items{
+        transform: translateY(0);
+    }
+
+
+    .navbar-container input[type="checkbox"]:checked ~ .hamberger-line .line1{
+        transform: rotate(45deg);
+    }
+
+    .navbar-container input[type="checkbox"]:checked ~ .hamberger-line .line2{
+        transform: scaleY(0);
+    }
+
+    .navbar-container input[type="checkbox"]:checked ~ .hamberger-line .line3{
+        transform: rotate(-45deg);
+    }
+
+    .food-container{
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .img-container:not(:last-child){
+        margin-bottom: 3rem;
+    }
+
+    .img-container{
+        box-shadow: 5px 5px 10px 0 #aaa;
+    }
+
+}
+
+@media screen and (max-width:500px){
+    :root{
+        font-size: 50%;
+    }
+
+    .food-menu-item{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .food-menu-item img{
+        margin: auto;
+    }
+
+    .testimonail-container{
+        flex-direction: column;
+    }
+
+    .contact-container{
+        flex-direction: column;
+        align-items: center;
+        padding: 0 3rem;
+    }
+
+    .contact-img,
+    .contact-message{
+        width: 100%;
+    }
+
+
+    
 }

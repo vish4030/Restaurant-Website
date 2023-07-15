@@ -16,15 +16,15 @@
         <div class="navbar-container container ">
             <input type="checkbox">
             <div class="hamberger-line">
-                <span class="line line1">1</span>
-                <span class="line line2">2</span>
-                <span class="line line3">3</span>
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
             </div>
             <ul class="menu-items">
                 <li><a href="#showcase">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#catogory">Category</a></li>
-                <li><a href="#menu">Menu</a></li>
+                <li><a href="#category">Category</a></li>
+                <li><a href="#food-menu">Menu</a></li>
                 <li><a href="#testimonail">Testimonail</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -36,7 +36,7 @@
         <div class="showcase-container">
             <h1 class="main-title">Eat right things</h1>
             <p>Eat healthy food, it good for your health.</p>
-            <a href="#menu" class="btn btn-primary">Menu</a>
+            <a href="#food-menu" class="btn btn-primary">Menu</a>
         </div>
 
     </section>
@@ -63,21 +63,21 @@
             <div class="img-container img1">
                 <img src="./image/food1.jpg" alt="">
                 <div class="food-info">
-                    <h2>Fruits1</h2>
+                    <h2>Fruits</h2>
                     <a href="" class="btn btn-primary">Learn more..</a>
                 </div>
             </div>
             <div class=" img-container img2">
                 <img src="./image/food2.jpg" alt="">
                 <div class="food-info">
-                    <h2>Fruits2</h2>
+                    <h2>Vegitables</h2>
                     <a href="" class="btn btn-primary">Learn more..</a>
                 </div>
             </div>
             <div class="img-container img3">
                 <img src="./image/food3.jpg" alt="">
                 <div class="food-info">
-                    <h2>Fruits3</h2>
+                    <h2>Grains</h2>
                     <a href="" class="btn btn-primary">Learn more..</a>
                 </div>
             </div>
@@ -94,7 +94,7 @@
                 <div class="food-discription">
                     <h3>food1</h3>
                     <p>Lorem ipsum dolor sit amet.</p>
-                    <p>Price: &#8377; 100</p>
+                    <p class="price">Price: &#8377; 100</p>
                 </div>
             </div>
             <div class="food-menu-item">
@@ -104,7 +104,7 @@
                 <div class="food-discription">
                     <h3>food2</h3>
                     <p>Lorem ipsum dolor sit amet.</p>
-                    <p>Price: &#8377; 100</p>
+                    <p class="price">Price: &#8377; 100</p>
                 </div>
             </div>
             <div class="food-menu-item">
@@ -114,7 +114,7 @@
                 <div class="food-discription">
                     <h3>food3</h3>
                     <p>Lorem ipsum dolor sit amet.</p>
-                    <p>Price: &#8377; 100</p>
+                    <p class="price">Price: &#8377; 100</p>
                 </div>
             </div>
             <div class="food-menu-item">
@@ -124,7 +124,7 @@
                 <div class="food-discription">
                     <h3>food4</h3>
                     <p>Lorem ipsum dolor sit amet.</p>
-                    <p>Price: &#8377; 100</p>
+                    <p class="price">Price: &#8377; 100</p>
                 </div>
             </div>
             <div class="food-menu-item">
@@ -134,7 +134,7 @@
                 <div class="food-discription">
                     <h3>food5</h3>
                     <p>Lorem ipsum dolor sit amet.</p>
-                    <p>Price: &#8377; 100</p>
+                    <p class="price">Price: &#8377; 100</p>
                 </div>
             </div>
             <div class="food-menu-item">
@@ -144,7 +144,7 @@
                 <div class="food-discription">
                     <h3>food6</h3>
                     <p>Lorem ipsum dolor sit amet.</p>
-                    <p>Price: &#8377; 100</p>
+                    <p class="price">Price: &#8377; 100</p>
                 </div>
             </div>
         </div>
@@ -189,7 +189,7 @@
                 <div class="star-rating">
                     <span class="fa fa-star checked fa-2x"></span>
                     <span class="fa fa-star checked fa-2x"></span>
-                    <span class="fa fa-star checked fa-2x" ></span>
+                    <span class="fa fa-star checked fa-2x"></span>
                     <span class="fa fa-star checked fa-2x"></span>
                     <span class="fa fa-star checked fa-2x fa-2x"></span>
                 </div>
@@ -207,13 +207,13 @@
     <section id="contact">
         <div class="contact-container container">
             <div class="contact-img">
-                <img src="./image/building-image.jpg" alt="">
+                <img src="./image/restraunt-image.jpg" alt="">
             </div>
             <div class="contact-message">
                 <h2>Contact Us</h2>
                 <form class="contact-form">
                     <input type="text" id="name" placeholder="Name">
-                    <input type="email"  id="email" placeholder="Email">
+                    <input type="email" id="email" placeholder="Email">
                     <textarea id="text-area" placeholder="Type Your Message Here"></textarea>
                     <button class="btn btn-primary">Submit</button>
                 </form>
@@ -225,6 +225,26 @@
         <h2>Restaurant Website &copy; 2023, All Right Reserved.</h2>
         <p>Developed by <b>Vishwajeet Kumar.</b></p>
     </section>
+
+    <!-- ###################### for scorling ############# -->
+    <script>
+        //let a_tag = document.getElementsByClassName("scorl");
+        let a_tag = document.querySelectorAll(".menu-items a");
+
+        for (let ele of a_tag) {
+            ele.addEventListener("click", function (e) {
+                e.preventDefault();
+                // id of clicked elements
+                const id = this.getAttribute("href");
+                const offsetTop = document.querySelector(id).offsetTop;  
+                // Finally scroll to target
+                scroll({
+                    top: offsetTop,
+                    behavior: "smooth"
+                })
+            })
+        }
+    </script>
 
 </body>
 
