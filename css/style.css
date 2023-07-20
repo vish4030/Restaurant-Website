@@ -158,10 +158,6 @@ h3 {
 }
 
 @keyframes about-text {
-    25%{
-        transform:translate(-50%);
-        flex: 1 1 100px;
-    }
     100% {
         transform: translate(0%);
     }
@@ -177,10 +173,6 @@ h3 {
 }
 
 @keyframes about-img {
-    25%{
-        transform:translate(-50%);
-        flex: 1 1 100px;
-    }
     100% {
         transform: translate(0%);
     }
